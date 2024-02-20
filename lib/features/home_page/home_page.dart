@@ -13,6 +13,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    double screenWidth = MediaQuery.of(context).size.width;
+    double screenHeight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SingleChildScrollView(
         child: SafeArea(
@@ -33,7 +36,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                      margin: EdgeInsets.only(top: 27, left: 100),
+                      margin: EdgeInsets.only(top: screenHeight*0.04, left: screenWidth*0.25),
                       child: InkWell(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
@@ -86,11 +89,11 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                      width: 181,
+                      width: screenWidth*0.45,
                       margin: EdgeInsets.only(left: 10),
                       child: SvgPicture.asset('assets/chart1.svg')),
                   Container(
-                      width: 181,
+                      width: screenWidth*0.45,
                       margin: EdgeInsets.only(right: 10),
                       child: SvgPicture.asset('assets/chart2.svg')),
                 ],

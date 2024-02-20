@@ -43,12 +43,13 @@ class _RequestsState extends State<Requests> with SingleTickerProviderStateMixin
                       onTap:(){
                         Navigator.of(context).pop();
                       },
-                      child: SvgPicture.asset('assets/Back Button.svg')),
+                      child: SvgPicture.asset('assets/Back Button.svg',color:  Theme.of(context).brightness == Brightness.dark ? AppColors.darkTextColor : Colors.black,
+                      )),
                   SizedBox(width: 23,),
                   Text('Requests',style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xff000000),
+                    color: Theme.of(context).brightness == Brightness.dark ? AppColors.darkTextColor : Colors.black,
                   ),
                   ),
                   SizedBox(width: 190,),

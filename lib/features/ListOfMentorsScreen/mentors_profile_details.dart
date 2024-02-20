@@ -33,9 +33,11 @@ class _MentorsProfileDetailsState extends State<MentorsProfileDetails> {
                         },
                         child: SvgPicture.asset('assets/Back Button.svg',color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,)),
                     SizedBox(width: 23,),
-                    Text('Details',style: TextStyle(
+                    Text(
+                      'Details',style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 20,
+                      color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
                     ),),
                   ],
                 ),

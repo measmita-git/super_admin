@@ -130,6 +130,7 @@ class AddBlog extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: screenHeight * 0.02,),
                 SizedBox(
                   height: screenHeight * 0.2,
                   child: Column(
@@ -216,6 +217,7 @@ class AddBlog extends StatelessWidget {
                   height: screenHeight * 0.05,
                   child: QuillToolbar.simple(
                     configurations: QuillSimpleToolbarConfigurations(
+                      color: Colors.red,
                       showAlignmentButtons: true,
                       showBoldButton: true,
                       showBackgroundColorButton: false,
@@ -255,6 +257,7 @@ class AddBlog extends StatelessWidget {
                   ),
                 ),
                 Container(
+
                   width: screenWidth * 0.9,
                   height: screenHeight * 0.4,
                   decoration: BoxDecoration(
@@ -263,12 +266,16 @@ class AddBlog extends StatelessWidget {
                         ? AppColors.darkBackgroundColor
                         : Color(0xffFCFCFD),
                   ),
-                  child: QuillEditor.basic(
-                    configurations: QuillEditorConfigurations(
-                      controller: _controller.controller,
-                      readOnly: false,
-                      sharedConfigurations: const QuillSharedConfigurations(
-                        locale: Locale('de'),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: QuillEditor.basic(
+                      configurations: QuillEditorConfigurations(
+
+                        controller: _controller.controller,
+                        readOnly: false,
+                        sharedConfigurations: const QuillSharedConfigurations(
+                          locale: Locale('de'),
+                        ),
                       ),
                     ),
                   ),
@@ -276,11 +283,10 @@ class AddBlog extends StatelessWidget {
                 SizedBox(height: screenHeight * 0.05),
                 DTButton(
                   onClick: () {
-
                     String title = _titleController.text;
 
-                    String description = _controller.controller.document.toPlainText();
-
+                    String description =
+                        _controller.controller.document.toPlainText();
 
                     _controller.createBlog(title, description);
                   },

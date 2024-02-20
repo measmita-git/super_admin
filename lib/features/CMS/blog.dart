@@ -142,9 +142,11 @@ class Blog extends StatelessWidget {
                 ),
               ),
             ),
-
             Padding(
-              padding: const EdgeInsets.only(left:20,right: 25, top: 44),
+              padding: EdgeInsets.only(
+                  left: screenWidth * 0.03,
+                  right: screenWidth * 0.03,
+                  top: screenHeight * 0.02),
               child: Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -155,7 +157,7 @@ class Blog extends StatelessWidget {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context)=>UpdateDeleteBlog()));
                   },
                   child: ComponentWrapper(
-                    width: 360,
+                    width: screenWidth*0.9,
                     backgroundColor: Theme.of(context).brightness == Brightness.dark ? AppColors.darkBackgroundColor:Color(0xffFFFFFF),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -169,7 +171,7 @@ class Blog extends StatelessWidget {
                               // Align text to start
                               children: [
                                 Container(
-                                  width:339,
+                                  width: screenWidth*0.9,
                                   child: Image.asset(
                                     'assets/blog2.png',
                                   ),
@@ -177,12 +179,12 @@ class Blog extends StatelessWidget {
                                 SizedBox(
                                   height: 16,
                                 ),
-                                const Row(
+                                Row(
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(left: 15),
                                       child: SizedBox(
-                                        width: 316,
+                                        width: screenWidth*0.8,
                                         child: Text(
                                           'Overcoming Self-doubt and Embracing Positivity',
                                           style: TextStyle(
@@ -197,12 +199,12 @@ class Blog extends StatelessWidget {
                                 SizedBox(
                                   height: 3,
                                 ),
-                                const Row(
+                                 Row(
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(left: 15),
                                       child: SizedBox(
-                                        width: 40,
+                                        width: screenWidth*0.2,
                                         child: Text(
                                           '7 min read',
                                           style: TextStyle(
@@ -227,7 +229,7 @@ class Blog extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 25, top: 18),
+              padding: EdgeInsets.only(left: screenWidth*0.03, right: screenWidth*0.03, top: screenHeight*0.03),
               child: Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -239,7 +241,7 @@ class Blog extends StatelessWidget {
                         builder: (context) => UpdateDeleteBlog()));
                   },
                   child: ComponentWrapper(
-                    width: 360,
+                    width: screenWidth*0.9,
                     backgroundColor: Theme.of(context).brightness == Brightness.dark ? AppColors.darkBackgroundColor:Color(0xffFFFFFF),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -253,7 +255,7 @@ class Blog extends StatelessWidget {
                               // Align text to start
                               children: [
                                 Container(
-                                  width: 339,
+                                  width: screenWidth*0.9,
                                   child: Image.asset(
                                     'assets/blog3.png',
                                   ),
@@ -311,7 +313,7 @@ class Blog extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 25, top: 18),
+              padding:  EdgeInsets.only(left: screenWidth*0.03, right: screenWidth*0.03, top: screenHeight*0.03),
               child: Container(
                 decoration: const BoxDecoration(
                   color: Colors.white,
@@ -323,7 +325,7 @@ class Blog extends StatelessWidget {
                         builder: (context) => UpdateDeleteBlog()));
                   },
                   child: ComponentWrapper(
-                    width: 360,
+                    width: screenWidth*0.9,
                     backgroundColor: Theme.of(context).brightness == Brightness.dark ? AppColors.darkBackgroundColor:Color(0xffFFFFFF),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -337,7 +339,7 @@ class Blog extends StatelessWidget {
                               // Align text to start
                               children: [
                                 Container(
-                                  width: 339,
+                                  width: screenWidth*0.9,
                                   child: Image.asset(
                                     'assets/blog3.png',
                                   ),

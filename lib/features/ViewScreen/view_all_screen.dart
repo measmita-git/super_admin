@@ -42,12 +42,12 @@ class _ViewAllSectionState extends State<ViewAllSection> with SingleTickerProvid
                       onTap:(){
                         Navigator.of(context).pop();
                       },
-                      child: SvgPicture.asset('assets/Back Button.svg')),
+                      child: SvgPicture.asset('assets/Back Button.svg',color:  Theme.of(context).brightness == Brightness.dark ? AppColors.darkTextColor : Colors.black,)),
                   SizedBox(width: 23,),
                   Text('View all',style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w700,
-                    color: Color(0xff000000),
+                    color:Theme.of(context).brightness == Brightness.dark ? AppColors.darkTextColor : Colors.black,
                   ),
                   ),
                   SizedBox(width: 190,),
